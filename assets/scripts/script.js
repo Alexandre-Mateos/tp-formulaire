@@ -1,3 +1,4 @@
+// Mes élements
 let form = document.querySelector("#formulaire");
 let card = document.querySelector("#recapCard");
 let myName = document.querySelector("#nom");
@@ -7,6 +8,7 @@ let myGender = document.querySelectorAll(".gender");
 let myProfession = document.querySelector("#profession");
 let myRegion = document.querySelector("#region");
 let myHobbies = document.querySelectorAll(".hobbies");
+let myLinkedin = document.querySelector("#linkedin");
 
 form.addEventListener('submit', (e) => {
     //permet d'arreter la soumission du formulaire
@@ -19,7 +21,7 @@ form.addEventListener('submit', (e) => {
     myProfessionIs();
     myRegionIs();
     myHobbiesAre();
-
+    mySocialProfil();
 })
 
 // fonction qui récupère mon nom et mon prénom
@@ -57,6 +59,7 @@ function myRegionIs(){
     paraRegion.innerHTML = `Region : ${myRegion.value}`;
     card.insertAdjacentElement("beforeend", paraRegion);
 }
+// fonction qui récupère les hobbies sélectionnés
 function myHobbiesAre (){
     const hobbiesSeleted = [];
     for (let i = 0 ; i < myHobbies.length ; i++){
@@ -67,4 +70,10 @@ function myHobbiesAre (){
     let paraHobbies = document.createElement("p");
     paraHobbies.innerHTML = `Hobbies : ${hobbiesSeleted.toString()}`;
     card.insertAdjacentElement("beforeend", paraHobbies);
+}
+// fonction qui récupère le lien vers le profil LinkedIn
+function mySocialProfil (){
+    let paraLinkedin = document.createElement("p");
+    paraLinkedin.innerHTML = `LinkedIn : ${myLinkedin.value}`;
+    card.insertAdjacentElement("beforeend", paraLinkedin);
 }
