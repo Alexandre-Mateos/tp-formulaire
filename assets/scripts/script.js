@@ -6,36 +6,36 @@ let myAge = document.querySelector("#age");
 let myGender = document.querySelectorAll(".gender");
 let myProfession = document.querySelector("#profession");
 let myRegion = document.querySelector("#region");
+let myHobbies = document.querySelectorAll(".hobbies");
 
 form.addEventListener('submit', (e) => {
     //permet d'arreter la soumission du formulaire
     e.preventDefault();
 
     //le reste vient ici
-    // fonction qui récupère mon nom et mon prénom
     myFullNameIs();
-    // fonction qui récupère l'age
     myAgeIs();
-    // fonction qui récupère le genre
     myGenderIs();
-    // fonction qui récupère la profession
     myProfessionIs();
-    // fonction qui récupère le hobbie
     myRegionIs();
+    myHobbiesAre();
 
 })
 
+// fonction qui récupère mon nom et mon prénom
 function myFullNameIs (){
     let paraFullName = document.createElement("p");
     paraFullName.innerHTML = `${myFirstname.value} ${myName.value}`;
     card.insertAdjacentElement("beforeend", paraFullName);
 }
+// fonction qui récupère l'age
 function myAgeIs (){
     
     let paraAge = document.createElement("p");
     paraAge.innerHTML = `Age : ${myAge.value}`;
     card.insertAdjacentElement("beforeend", paraAge);
 }
+// fonction qui récupère le genre
 function myGenderIs(){
     for (let i = 0; i < myGender.length ; i++){
         if (myGender[i].checked){
@@ -45,13 +45,26 @@ function myGenderIs(){
         }
     }
 }
+// fonction qui récupère la profession
 function myProfessionIs(){
     let paraProfession = document.createElement("p");
     paraProfession.innerHTML = `Profession : ${myProfession.value}`;
     card.insertAdjacentElement("beforeend", paraProfession);
 }
+// fonction qui récupère la région
 function myRegionIs(){
     let paraRegion = document.createElement("p");
     paraRegion.innerHTML = `Region : ${myRegion.value}`;
     card.insertAdjacentElement("beforeend", paraRegion);
+}
+function myHobbiesAre (){
+    const hobbiesSeleted = [];
+    for (let i = 0 ; i < myHobbies.length ; i++){
+        if(myHobbies[i].checked){
+            hobbiesSeleted.push(myHobbies[i].value);
+        }
+    }
+    let paraHobbies = document.createElement("p");
+    paraHobbies.innerHTML = `Hobbies : ${hobbiesSeleted.toString()}`;
+    card.insertAdjacentElement("beforeend", paraHobbies);
 }
