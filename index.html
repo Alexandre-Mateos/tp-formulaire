@@ -9,8 +9,51 @@
     <form>
         <label for="nom">Nom</label>
         <input type="text" id="nom">
-        <label for="prenom">Nom</label>
+        <label for="prenom">Preom</label>
         <input type="text" id="prenom">
+        <label for="page">Age</label>
+        <input type="number" id="prenom">
+        <fieldset>
+            <legend>Sexe</legend>
+            <label for="homme">Homme</label>
+            <input type="radio" id="homme" name="sexe">
+            <label for="femme">Femme</label>
+            <input type="radio" id="femme" name="sexe">
+        </fieldset>
+        <label for="profession">Profession</label>
+        <select name="profession" id="profession">
+            <option value="">--Sélectionner--</option>
+            <option value="etudiant(e)">Etudiant(e)</option>
+            <option value="developpeur(se)">Développeur(se)</option>
+            <option value="enseignant(e)">Enseignant(e)</option>
+            <option value="designer">Designer</option>
+            <option value="autre">Autre</option>
+        </select>
+        <label for="region">Région</label>
+        <select name="region" id="region">
+            <option value="">--Sélectionner--</option>
+            <option value="ile-de-france">Île-de-France</option>
+            <option value="provence-alpe-cote-azur">Provence-Alpes-Côte d’Azur</option>
+            <option value="bretagne">Bretagne</option>
+            <option value="grand-est">Grand Est</option>
+            <option value="auvergne-rhone-alpe">Auvergne-Rhône-Alpes</option>
+        </select>
+        <fieldset>
+            <legend>Hobbies</legend>
+            <input type="checkbox" id="lecture" name="lecture" value="lecture">
+            <label for="lecture">Lecture</label>
+            <input type="checkbox" id="sport" name="sport" value="lecture">
+            <label for="sport">Sport</label>
+            <input type="checkbox" id="jeux-video" name="jeux-video" value="jeux-video">
+            <label for="jeux-video">Jeux vidéo</label>
+            <input type="checkbox" id="musique" name="musique" value="musique">
+            <label for="musique">Musique</label>
+            <input type="checkbox" id="voyage" name="voyage" value="voyage">
+            <label for="voyage">Voyage</label>
+        </fieldset>
+        <label for="linkedin">Lien LinkedIn</label>
+        <input type="url" id="linkedin">
+        <button type="submit">Valider</button>
     </form>
 </body>
 </html>
