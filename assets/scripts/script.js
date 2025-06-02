@@ -22,6 +22,7 @@ form.addEventListener('submit', (e) => {
     myRegionIs();
     myHobbiesAre();
     mySocialProfil();
+    card.classList.add(styleCard);
 })
 
 // fonction qui récupère mon nom et mon prénom
