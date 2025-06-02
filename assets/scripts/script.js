@@ -5,6 +5,7 @@ let myFirstname = document.querySelector("#prenom");
 let myAge = document.querySelector("#age");
 let myGender = document.querySelectorAll(".gender");
 let myProfession = document.querySelector("#profession");
+let myRegion = document.querySelector("#region");
 
 form.addEventListener('submit', (e) => {
     //permet d'arreter la soumission du formulaire
@@ -19,7 +20,8 @@ form.addEventListener('submit', (e) => {
     myGenderIs();
     // fonction qui récupère la profession
     myProfessionIs();
-
+    // fonction qui récupère le hobbie
+    myHobbieIs();
 
 })
 
@@ -47,4 +49,9 @@ function myProfessionIs(){
     let paraProfession = document.createElement("p");
     paraProfession.innerHTML = `Profession : ${myProfession.value}`;
     card.insertAdjacentElement("beforeend", paraProfession);
+}
+function myHobbieIs(){
+    let paraRegion = document.createElement("p");
+    paraRegion.innerHTML = `Region : ${myRegion.value}`;
+    card.insertAdjacentElement("beforeend", paraRegion);
 }
