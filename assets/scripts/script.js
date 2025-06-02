@@ -4,10 +4,12 @@ let myName = document.querySelector("#nom");
 let myFirstname = document.querySelector("#prenom");
 let myAge = document.querySelector("#age");
 let myGender = document.querySelectorAll(".gender");
+let myProfession = document.querySelector("#profession");
 
 form.addEventListener('submit', (e) => {
     //permet d'arreter la soumission du formulaire
     e.preventDefault();
+
     //le reste vient ici
     // fonction qui récupère mon nom et mon prénom
     myFullNameIs();
@@ -15,6 +17,9 @@ form.addEventListener('submit', (e) => {
     myAgeIs();
     // fonction qui récupère le genre
     myGenderIs();
+    // fonction qui récupère la profession
+    myProfessionIs();
+
 
 })
 
@@ -29,7 +34,6 @@ function myAgeIs (){
     paraAge.innerHTML = `Age : ${myAge.value}`;
     card.insertAdjacentElement("beforeend", paraAge);
 }
-
 function myGenderIs(){
     for (let i = 0; i < myGender.length ; i++){
         if (myGender[i].checked){
@@ -38,4 +42,9 @@ function myGenderIs(){
             card.insertAdjacentElement("beforeend", paraGender);
         }
     }
+}
+function myProfessionIs(){
+    let paraProfession = document.createElement("p");
+    paraProfession.innerHTML = `Profession : ${myProfession.value}`;
+    card.insertAdjacentElement("beforeend", paraProfession);
 }
