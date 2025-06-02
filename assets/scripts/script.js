@@ -21,7 +21,7 @@ form.addEventListener('submit', (e) => {
     // fonction qui récupère la profession
     myProfessionIs();
     // fonction qui récupère le hobbie
-    myHobbieIs();
+    myRegionIs();
 
 })
 
@@ -50,7 +50,7 @@ function myProfessionIs(){
     paraProfession.innerHTML = `Profession : ${myProfession.value}`;
     card.insertAdjacentElement("beforeend", paraProfession);
 }
-function myHobbieIs(){
+function myRegionIs(){
     let paraRegion = document.createElement("p");
     paraRegion.innerHTML = `Region : ${myRegion.value}`;
     card.insertAdjacentElement("beforeend", paraRegion);
